@@ -16,6 +16,10 @@ body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+audio{
+    width:200px;
+}
+
 #my-video{
     width: 100%;
     z-index: 9999;
@@ -33,7 +37,7 @@ body {
     padding: 0;
     font-size: 7em;
     font-weight: 300;
-    color: orange;
+    color: yellowgreen;
 }
 
 /* Custom Button Styles */
@@ -155,6 +159,12 @@ hr.small {
     margin: 5px 5px 0 0;
 }
 
+.img-responsive {
+    width:120px;
+    height:110px;
+    border-radius: 50%;
+}
+
 /* Header */
 
 .header {
@@ -162,7 +172,7 @@ hr.small {
     position: relative;
     width: 100%;
     height: 100%;
-    background: url(../img/turntable.jpg) no-repeat center center scroll;
+/*    background: url(../img/turntable.jpg) no-repeat center center scroll;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -192,7 +202,7 @@ hr.small {
     width: 100%;
     height: 400px;
     color: #fff;
-    background: url(../img/callout.jpg) no-repeat center center scroll;
+/*    background: url(http://starrfmonline.com/kitnes/data/2015/02/21/1.2005723.jpeg) no-repeat center center scroll;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -200,6 +210,38 @@ hr.small {
 }
 
 /* Portfolio */
+
+h9{
+    text-align: left;
+    font-size: 25px;
+    color: white;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background: rgba(0, 0, 0, 0.7);
+    padding:10px;
+}
+
+h10{
+    font-size:40px;
+/*    background: rgba(0, 0, 0, 0.7);*/
+}
+
+.img-wrap{
+    position:relative;
+}
+
+.img-description{
+    position:absolute;
+    visibility:hidden;
+    opacity:0;
+    color:#fff;
+}
+
+.img-wrap:hover .img-description {
+  visibility: visible;
+  opacity: 1;
+}
 
 .portfolio {
     padding: 50px 0;
@@ -243,4 +285,5 @@ hr.small {
 
 footer {
     padding: 100px 0;
+    background-color: yellowgreen;
 }

@@ -20,6 +20,9 @@
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="https://static.radiocdn.com/jquery.shoutcast.easy.min.js?host=eclipse.wavestreamer.com&port=3847&stream=1"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -39,38 +42,40 @@
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
-                <a href="#top"  onclick = $("#menu-close").click(); >Start Bootstrap</a>
+                <a href="#top"  onclick = $("#menu-close").click(); >myLiveDJ</a>
             </li>
             <li>
                 <a href="#top" onclick = $("#menu-close").click(); >Home</a>
             </li>
-            <li>
+<!--             <li>
                 <a href="#about" onclick = $("#menu-close").click(); >About</a>
+            </li> -->
+            <li>
+                <a href="#services" onclick = $("#menu-close").click(); >Artists</a>
             </li>
             <li>
-                <a href="#services" onclick = $("#menu-close").click(); >Services</a>
-            </li>
-            <li>
-                <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
+                <a href="#portfolio" onclick = $("#menu-close").click(); >Events</a>
             </li>
             <li>
                 <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
             </li>
+
         </ul>
     </nav>
 
     <!-- Header -->
-    <header id="top" class="header">
+    <header id="top" class="header"  data-parallax="scroll" data-image-src="img/turntable.jpg">
         <div class="text-vertical-center">
             <h1>myLiveDJ</h1>
+            
             <!-- <h3>DJ on demand</h3> -->
             <br>
-            <a href="#about" class="btn btn-dark btn-lg">Listen Now</a>
+            <a href="#services" class="btn btn-dark btn-lg">Find Artists</a>
         </div>
     </header>
 
     <!-- About -->
-    <section id="about" class="about">
+<!--     <section id="about" class="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -78,19 +83,12 @@
                     <p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
                 </div>
             </div>
+ -->
 
-                <div id='my-video'></div>
-    <script type='text/javascript'>
-        jwplayer('my-video').setup({
-        file: 'http://eclipse.wavestreamer.com:3847/;*.mp3',
-        type: 'mp3',
-        height: 40
-        });
-    </script>
             <!-- /.row -->
-        </div>
+        <!-- </div> -->
         <!-- /.container -->
-    </section>
+    <!-- </section> -->
 
     <!-- Services -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
@@ -98,61 +96,63 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Our Services</h2>
+                    <h2>Artists</h2>
                     <hr class="small">
                     <div class="row">
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-6 col-sm-6">
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-cloud fa-stack-1x text-primary"></i>
+                                <img class="img-responsive" src="img/dj.jpg" alt="">
                             </span>
                                 <h4>
-                                    <strong>Service Name</strong>
+                                    <strong>Ricardo Montero</strong>
                                 </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
+                                <audio controls src="http://174.137.50.51:16504/stream;.mp3"></audio>
+                                <!-- <a href="#" class="btn btn-light">Bio</a> -->
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-6 col-sm-6">
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-compass fa-stack-1x text-primary"></i>
+                                <img class="img-responsive" src="img/final_djxray_logo.jpg" alt="">
                             </span>
                                 <h4>
-                                    <strong>Service Name</strong>
+                                    <strong>DJ XRAY</strong>
                                 </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
+                                <audio controls src="http://174.137.50.51:16504/stream;.mp3"></audio>
+                                <!-- <a href="#" class="btn btn-light">Learn More</a> -->
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
+<!--                        <div class="col-md-3 col-sm-6">
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
+ 
+
                             </span>
                                 <h4>
-                                    <strong>Service Name</strong>
+                                    <strong>Above & Beyond</strong>
                                 </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <audio controls src="http://174.137.50.51:16504/stream;.mp3"></audio>
                                 <a href="#" class="btn btn-light">Learn More</a>
                             </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
+                        </div> -->
+<!--                         <div class="col-md-3 col-sm-6">
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-shield fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>Service Name</strong>
+                                    <strong>Bright Lights</strong>
                                 </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <audio controls src="http://174.137.50.51:16504/stream;.mp3"></audio>
                                 <a href="#" class="btn btn-light">Learn More</a>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <!-- /.row (nested) -->
                 </div>
@@ -165,44 +165,53 @@
 
     <!-- Callout -->
     <aside class="callout">
-        <div class="text-vertical-center">
-            <h1>Vertically Centered Text</h1>
+        <div class="text-vertical-center" data-parallax="scroll" data-image-src="img/dj-bg.jpeg">
+
+        <h1>world class djs</h1>
+
         </div>
     </aside>
-
+    
     <!-- Portfolio -->
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Our Work</h2>
+                    <h2>Upcoming Events</h2>
                     <hr class="small">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="portfolio-item">
                                 <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
+                                    <div class = "img-wrap">
+                                    <img class="img-portfolio img-responsive" src="http://i.imgur.com/IRjq5Ga.jpg?1">
+                                    <h9><h10>JAN 22</h10><br />DJ Ricardo Montero</h9>
+                                    <p class= "img-description">HELLO WORLD</p>
+                                    </div>
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
                                 <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
+                                    <img class="img-portfolio img-responsive" src="http://i.imgur.com/Oial1wf.jpg?1">
+                                    <h9><h10>JAN 22</h10><br />DJ Ricardo Montero</h9>
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
                                 <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
+                                    <img class="img-portfolio img-responsive" src="http://i.imgur.com/FMKd6VQ.jpg?1">
+                                    <h9><h10>JAN 22</h10><br />DJ Ricardo Montero</h9>
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
                                 <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
+                                    <img class="img-portfolio img-responsive" src="http://i.imgur.com/2Me4VjZ.jpg?1">
+                                    <h9><h10>JAN 22</h10><br />DJ Ricardo Montero</h9>
                                 </a>
                             </div>
                         </div>
@@ -218,7 +227,7 @@
     </section>
 
     <!-- Call to Action -->
-    <aside class="call-to-action bg-primary">
+<!--     <aside class="call-to-action bg-primary">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -228,7 +237,7 @@
                 </div>
             </div>
         </div>
-    </aside>
+    </aside> -->
 
     <!-- Map -->
 <!--     <section id="contact" class="map">
@@ -242,12 +251,12 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container">
+        <div class="container" id="contact">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <h4><strong>myLiveDJ</strong>
                     </h4>
-                    <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
+                    <p>729 7th Ave.<br>New York, NY 10012</p>
                     <ul class="list-unstyled">
                         <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
                         <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a>
