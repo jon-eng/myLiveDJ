@@ -159,11 +159,11 @@ hr.small {
     margin: 5px 5px 0 0;
 }
 
-.img-responsive {
+/*.img-responsive {
     width:120px;
     height:110px;
     border-radius: 50%;
-}
+}*/
 
 /* Header */
 
@@ -258,6 +258,47 @@ h10{
 .img-portfolio:hover {
     opacity: 0.8;
 }
+
+/* Modals */
+
+.modal-header{
+    text-align: center;
+}
+
+.modal-header .img-responsive{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+img.img-responsive:hover{
+    -webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+     transform:scale(1.25);
+    cursor: pointer;
+}
+
+img.img-responsive{
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+}
+
+.modal-content{
+    background: #0D0D0D;
+    color:white;
+}
+
+h10{
+    font-size: 22px;
+    color: yellowgreen;
+    margin-right: 10px;
+}
+
 
 /* Call to Action */
 
