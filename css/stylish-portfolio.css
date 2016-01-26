@@ -255,9 +255,9 @@ h10{
     margin: 0 auto;
 }
 
-.img-portfolio:hover {
-    opacity: 0.8;
-}
+/*.img-portfolio:hover {
+    display:visible;    
+}*/
 
 /* Modals */
 
@@ -272,21 +272,24 @@ h10{
 }
 
 img.img-responsive:hover{
-    -webkit-transform:scale(1.25); /* Safari and Chrome */
-    -moz-transform:scale(1.25); /* Firefox */
-    -ms-transform:scale(1.25); /* IE 9 */
-    -o-transform:scale(1.25); /* Opera */
-     transform:scale(1.25);
+    -webkit-transform:scale(1.15);
+    -moz-transform:scale(1.15);
+    -ms-transform:scale(1.15);
+    -o-transform:scale(1.15);
+     transform:scale(1.15);
     cursor: pointer;
 }
 
+
 img.img-responsive{
-    -webkit-transition: all 1s ease; /* Safari and Chrome */
-    -moz-transition: all 1s ease; /* Firefox */
-    -ms-transition: all 1s ease; /* IE 9 */
-    -o-transition: all 1s ease; /* Opera */
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
     transition: all 1s ease;
 }
+
+
 
 .modal-content{
     background: #0D0D0D;
@@ -297,6 +300,29 @@ h10{
     font-size: 22px;
     color: yellowgreen;
     margin-right: 10px;
+}
+
+/* Event Animation */
+
+.event {
+    font-size: 25px;
+    margin-left: 35%;
+    margin-bottom: 5%;
+    position: absolute;
+/*    background: rgba(0,0,0,0.75);*/
+    color: white;
+    padding: 10px 20px;
+    opacity: 0;
+    bottom: -15%;
+    left: 0;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+}
+
+a:hover .event {
+  opacity: 1;
+  bottom: 0;
 }
 
 
