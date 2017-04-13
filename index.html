@@ -67,7 +67,35 @@
     </nav>
 
     <!-- Header -->
-    <header id="top" class="header"  data-parallax="scroll" data-image-src="img/turntable.jpg">
+<!--     <header id="top" class="header"  data-parallax="scroll" data-image-src="img/turntable.jpg"> -->
+    <header id="top" class="header">
+<!--         <div class="youtube"> -->
+<!--             <iframe id="bg-video" width="100%" height="100%"src="https://www.youtube.com/embed/SaUN0QHOkHk?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;enablejsapi=1" frameborder="0" allowfullscreen="allowfullscreen"></iframe> -->
+ <!--        </div> -->
+            <div id="youtube"></div>
+                <script>      // 2. This code loads the IFrame Player API code asynchronously.
+                      var tag = document.createElement('script');
+                      tag.src = "http://www.youtube.com/player_api";
+                      var firstScriptTag = document.getElementsByTagName('script')[0];
+                      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                      // 3. This function creates an <iframe> (and YouTube player)
+                      //    after the API code downloads.
+                      var player;
+                      function onYouTubePlayerAPIReady() {
+                        player = new YT.Player('youtube', {
+                          playerVars: { 'autoplay': 1, 'controls': 0,'autohide':1, 'showinfo':0},
+                          videoId: 'SaUN0QHOkHk',
+                          events: {
+                            'onReady': onPlayerReady}
+                        });
+                      }
+
+                      // 4. The API will call this function when the video player is ready.
+                      function onPlayerReady(event) {
+                        event.target.mute();
+                      }
+                </script>
         <div class="text-vertical-center">
             <h1>myLiveDJ</h1>
             
@@ -114,7 +142,7 @@
                                     <strong>Ricardo Montero</strong>
                                 </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <audio controls src="http://174.137.50.51:16504/stream;.mp3"></audio>
+                              <iframe src="https://mixlr.com/users/5401339/embed" width="100%" height="150px" scrolling="no" frameborder="yes" marginheight="0" marginwidth="0"></iframe>
                                 <!-- <a href="#" class="btn btn-light">Bio</a> -->
                             </div>
                         </div>
@@ -168,6 +196,9 @@
         </div>
         <!-- /.container -->
     </section>
+    <div class = "soundcloud" style='display:none; position:fixed; bottom:-2px; width:100%; z-index:9999;'>
+        <iframe width="100%" height="150" scrolling="yes" frameborder="yes" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/3654201&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
+    </div>
 
     <!-- Modal -->
     <div id="myModal" class="modal fade" role="dialog">
@@ -184,8 +215,10 @@
             <h10>Location:</h10>Queens, NY<p></p>
             <h10>Music Genre:</h10>EDM, Trance<p></p>
             <h10>Bio:</h10>The Network Administrator sets up, configures and supports all network systems organization-wide. The position is responsible for maintaining all networking hardware/software systems at peak levels of performance at all times. Additional responsibilities include, troubleshooting, gauging network performance and maintaining high levels of network security alertness.
-            
-
+            <div class = "subscriptions">
+                <a href="https://itunes.apple.com/us/podcast/system-shaker-on-antifmradio.com/id563790249" target="_blank"><i class="fa fa-apple fa-fw fa-2x"></i></a>
+                <a href="https://soundcloud.com/ricardo_montero" target="_blank"><i class="fa fa-soundcloud fa-fw fa-2x"></i></a> 
+            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -346,6 +379,12 @@
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-apple fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-soundcloud fa-fw fa-3x"></i></a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-instagram fa-fw fa-3x"></i></a>
